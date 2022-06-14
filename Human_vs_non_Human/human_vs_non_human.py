@@ -26,7 +26,7 @@ def load_images(img_loc: str):
 
 def cross_val_list():
     random.seed(1)
-    non_radial_rand = random.sample([i for i in images['non-human'].keys() if i not in list(images['human'].keys())],
+    non_radial_rand = random.choices([i for i in images['non-human'].keys() if i not in list(images['human'].keys())],
                                     k=images['human'].__len__())
     dist = []
     for idx, i in enumerate(list(images['human'].keys())):
@@ -37,7 +37,7 @@ def cross_val_list():
 
 
 if __name__ == '__main__':
-    images_loc = "data/cropped/4x4"
+    images_loc = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/4x4"
     # labels = ['radial', 'non-radial']
     images = load_images(images_loc)
     in_shape = images['human'][list(images['human'].keys())[0]][0].shape
@@ -125,4 +125,3 @@ if __name__ == '__main__':
     print(f'> Accuracy: {np.mean(acc_per_fold)} (+- {np.std(acc_per_fold)})')
     print(f'> Loss: {np.mean(loss_per_fold)}')
     print('=================================================================')
-

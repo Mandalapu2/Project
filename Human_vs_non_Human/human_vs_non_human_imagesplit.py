@@ -59,11 +59,11 @@ def split_images(img_s: dict, new_human_loc: str,
             cv2.imwrite("{0}/{1}".format(new_human_loc, non_mask_img_name), non_mask_img)
 
 if __name__ == '__main__':
-    image_dir = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/4x4"
+    image_dir = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/8x8"
     labels = ['human', 'non-human']
-    x_div, y_div = 4, 4
-    new_human = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/new_human".format(x_div, y_div)
-    new_non_numan = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/new_non_human".format(x_div, y_div)
+    x_div, y_div = 8, 8
+    new_human = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/new-human".format(x_div, y_div)
+    new_non_numan = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/new-non-human".format(x_div, y_div)
 
     images = get_images(image_dir, labels)
     split_images(images,  new_human, new_non_numan)    

@@ -70,7 +70,7 @@ if __name__ == '__main__':
     #image_dir = "C:\Users\jahna\neDrive\Documents\GitHub\Project\classfication_radial_vs_non_radial\data\original"
     image_dir = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/original"
     labels = ['human', 'non-human']
-    x_div, y_div = 4, 4
+    x_div, y_div = 8, 8
     radial_folder = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/human".format(x_div, y_div)
     #radial_folder = "data/cropped/{0}x{0}/radial".format(x_div, y_div)
     non_radial_folder = "C:/Users/jahna/OneDrive/Documents/GitHub/Project/classfication_human_vs_non_human/data/cropped/{}x{}/non-human".format(x_div, y_div)
